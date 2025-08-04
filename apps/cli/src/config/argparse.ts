@@ -150,7 +150,7 @@ if (commandExecuted === 'auth' || commandExecuted === 'telemetry') {
   silent = false;
   verbose = false;
   token = undefined;
-  bridgeMode = false;
+  bridgeMode = true;
 } else {
   const {
     port: parsedPort,
@@ -186,16 +186,8 @@ if (commandExecuted === 'auth' || commandExecuted === 'telemetry') {
 
 // Export the parsed values
 export {
-  port,
-  appPort,
-  workspace,
-  silent,
-  verbose,
-  token,
-  bridgeMode,
-  commandExecuted,
-  authSubcommand,
-  telemetrySubcommand,
+  appPort, authSubcommand, bridgeMode,
+  commandExecuted, port, silent, telemetrySubcommand, token, verbose, workspace
 };
 
 // Export telemetry level if set command was used

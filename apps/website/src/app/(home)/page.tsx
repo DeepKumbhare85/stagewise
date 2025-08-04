@@ -1,12 +1,12 @@
 'use client';
 import Link from 'next/link';
 
-import { Zap, Settings, Layers, MessageSquare, User } from 'lucide-react';
 import { Clipboard } from '@/components/clipboard';
 import { ScrollReveal } from '@/components/landing/scroll-reveal';
-import { usePostHog } from 'posthog-js/react';
-import { useState, useEffect } from 'react';
+import { Layers, MessageSquare, Settings, User, Zap } from 'lucide-react';
 import Image from 'next/image';
+import { usePostHog } from 'posthog-js/react';
+import { useEffect, useState } from 'react';
 import AdobeLogo from './_components/company_logos/adobe.png';
 import AirBnBLogo from './_components/company_logos/airbnb.png';
 import AmazonLogo from './_components/company_logos/amazon.png';
@@ -14,20 +14,20 @@ import MicrosoftLogo from './_components/company_logos/microsoft.png';
 import OracleLogo from './_components/company_logos/oracle.png';
 import SamsungLogo from './_components/company_logos/samsung.png';
 import ZendeskLogo from './_components/company_logos/zendesk.png';
+import AngularLogo from './_components/plugin_logos/angular.svg';
 import ReactLogo from './_components/plugin_logos/react.svg';
 import VueLogo from './_components/plugin_logos/vue.svg';
-import AngularLogo from './_components/plugin_logos/angular.svg';
 
-import CursorLogo from './_components/ide_logos/cursor.png';
-import WindsurfLogo from './_components/ide_logos/windsurf.png';
-import GitHubCopilotLogo from './_components/ide_logos/github_copilot.png';
-import TraeLogo from './_components/ide_logos/trae.png';
-import ReactFrameworkLogo from './_components/framework_logos/react.png';
-import VueFrameworkLogo from './_components/framework_logos/vue.png';
 import AngularFrameworkLogo from './_components/framework_logos/angular.png';
-import SvelteFrameworkLogo from './_components/framework_logos/svelte.png';
 import NextFrameworkLogo from './_components/framework_logos/next.png';
 import NuxtFrameworkLogo from './_components/framework_logos/nuxt.png';
+import ReactFrameworkLogo from './_components/framework_logos/react.png';
+import SvelteFrameworkLogo from './_components/framework_logos/svelte.png';
+import VueFrameworkLogo from './_components/framework_logos/vue.png';
+import CursorLogo from './_components/ide_logos/cursor.png';
+import GitHubCopilotLogo from './_components/ide_logos/github_copilot.png';
+import TraeLogo from './_components/ide_logos/trae.png';
+import WindsurfLogo from './_components/ide_logos/windsurf.png';
 
 // GradientStarIcon: Star with gradient fill using mask
 function StarIcon({ className = '' }: { className?: string }) {
@@ -297,9 +297,8 @@ export default function Home() {
           ].map((feature, _i) => (
             <ScrollReveal key={feature.title} delay={feature.delay}>
               <div
-                className={`group -translate-y-1 h-full rounded-2xl border border-zinc-500/20 bg-white p-6 shadow-2xl shadow-[rgba(0,0,0,0.15)] transition-all duration-300 dark:border-zinc-800 dark:bg-zinc-900 ${
-                  feature.size === 'large' ? 'lg:col-span-2' : ''
-                }`}
+                className={`group -translate-y-1 h-full rounded-2xl border border-zinc-500/20 bg-white p-6 shadow-2xl shadow-[rgba(0,0,0,0.15)] transition-all duration-300 dark:border-zinc-800 dark:bg-zinc-900 ${feature.size === 'large' ? 'lg:col-span-2' : ''
+                  }`}
               >
                 <div
                   className={`mb-4 inline-flex rounded-lg p-3 transition-colors ${feature.iconBg}`}
